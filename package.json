@@ -1,7 +1,7 @@
 {
-  "name": "react-native-wheel-picker",
+  "name": "@copofe/react-native-wheel-picker",
   "version": "0.1.0",
-  "description": "react-native-wheel-picker",
+  "description": "@copofe/react-native-wheel-picker",
   "source": "./src/index.tsx",
   "main": "./lib/commonjs/index.js",
   "module": "./lib/module/index.js",
@@ -32,7 +32,7 @@
     "!**/.*"
   ],
   "scripts": {
-    "example": "yarn workspace react-native-wheel-picker-example",
+    "example": "yarn workspace @copofe/react-native-wheel-picker-example",
     "test": "jest",
     "typecheck": "tsc",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
@@ -47,14 +47,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/copofe/react-native-wheel-picker.git"
+    "url": "git+https://github.com/copofe/@copofe/react-native-wheel-picker.git"
   },
   "author": "copofe <me@shinji.me> (https://github.com/copofe)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/copofe/react-native-wheel-picker/issues"
+    "url": "https://github.com/copofe/@copofe/react-native-wheel-picker/issues"
   },
-  "homepage": "https://github.com/copofe/react-native-wheel-picker#readme",
+  "homepage": "https://github.com/copofe/@copofe/react-native-wheel-picker#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
@@ -107,7 +107,10 @@
       "tagName": "v${version}"
     },
     "npm": {
-      "publish": true
+      "publish": true,
+      "publishConfig": {
+        "access": "public"
+      }
     },
     "github": {
       "release": true
@@ -176,5 +179,8 @@
   "create-react-native-library": {
     "type": "library",
     "version": "0.39.0"
+  },
+  "dependencies": {
+    "@rozhkov/react-useful-hooks": "^1.0.9"
   }
 }

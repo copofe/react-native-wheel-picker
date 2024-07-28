@@ -1,24 +1,12 @@
-# react-native-wheel-picker
+# @copofe/react-native-wheel-picker
 
-react-native-wheel-picker
+@copofe/react-native-wheel-picker
 
 ## Installation
 
 ```sh
-npm install react-native-wheel-picker
+npm install @copofe/react-native-wheel-picker
 ```
-
-## Usage
-
-
-```js
-import { multiply } from 'react-native-wheel-picker';
-
-// ...
-
-const result = await multiply(3, 7);
-```
-
 
 ## Contributing
 

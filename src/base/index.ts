@@ -12,13 +12,11 @@ export type {
   RenderItemContainer,
   RenderOverlay,
   RenderList,
-  PickerProps,
-} from './base';
+} from './types';
 
-export { usePickerItemHeight, useScrollContentOffset } from './base';
+export { useScrollContentOffset } from './contexts/ScrollContentOffsetContext';
+export { usePickerItemHeight } from './contexts/PickerItemHeightContext';
 
-import { default as WheelPicker } from './base';
-
+export { type PickerProps } from './picker/Picker';
+import WheelPicker from './picker/Picker';
 export default WheelPicker;
-
-export { withVirtualized, type WithVirtualizedProps } from './hoc/virtualized';
