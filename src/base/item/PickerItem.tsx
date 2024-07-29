@@ -21,7 +21,7 @@ const PickerItem = ({ value, label, itemTextStyle }: PickerItemProps) => {
 const styles = StyleSheet.create({
   root: {
     textAlign: 'center',
-    fontSize: 20,
+    fontSize: 18,
   },
 });
 

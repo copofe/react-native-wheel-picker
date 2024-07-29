@@ -15,7 +15,7 @@ const useSyncScrollEffect = ({
     if (listRef.current == null || touching) {
       return;
     }
-    listRef.current.scrollToIndex({ index: valueIndex, animated: false });
+    listRef.current.scrollToIndex({ index: valueIndex, animated: true });
   }, [valueIndex]); // eslint-disable-line react-hooks/exhaustive-deps
 };
 

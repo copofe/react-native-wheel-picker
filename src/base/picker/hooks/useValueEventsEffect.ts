@@ -57,7 +57,7 @@ const useValueEventsEffect = <ItemT>(
     onValueChanged({ index: activeIndex, item: data[activeIndex]! });
   });
   const onValueChangedDebounce = useMemo(
-    () => debounce(onStableValueChanged, 150),
+    () => debounce(onStableValueChanged, 100),
     [onStableValueChanged]
   );
 
