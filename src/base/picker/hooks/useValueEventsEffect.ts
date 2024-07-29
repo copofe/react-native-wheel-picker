@@ -54,9 +54,7 @@ const useValueEventsEffect = <ItemT>(
       return;
     }
     const activeIndex = activeIndexRef.current;
-    if (activeIndex !== valueIndex) {
-      onValueChanged({ index: activeIndex, item: data[activeIndex]! });
-    }
+    onValueChanged({ index: activeIndex, item: data[activeIndex]! });
   });
   const onValueChangedDebounce = useMemo(
     () => debounce(onStableValueChanged, 150),
@@ -67,11 +65,8 @@ const useValueEventsEffect = <ItemT>(
     const id = offsetYAv.addListener(({ value: offset }) => {
       onValueChangedDebounce();
       const index = getIndex(offset);
-      const activeIndex = activeIndexRef.current;
-      if (index !== activeIndex) {
-        activeIndexRef.current = index;
-        onValueChanging?.({ item: data[index]!, index });
-      }
+      activeIndexRef.current = index;
+      onValueChanging?.({ item: data[index]!, index });
     });
     return () => {
       offsetYAv.removeListener(id);
